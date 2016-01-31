@@ -1,0 +1,1385 @@
+a {
+        text-decoration: none;
+}
+
+body {
+        font-family: 'Raleway', Helvetica, Arial, sans-serif;
+        margin: 0 0 0 0;
+}
+
+html, body {
+        height: 100%;
+        
+}
+
+.container {
+        background-color: #eff1f5;
+        height: 100%;
+}
+
+.content {
+        overflow:hidden;
+        margin: 0 auto;
+        max-width: 100%;
+        
+}
+
+#drawer {
+        position: fixed;
+        left: 0;
+}
+
+.fake-tumblr-post {
+        background-color: white;
+        max-width: 300px;
+        margin: 0 auto;
+        padding-left: 12px;
+        padding-right: 12px;
+        
+}
+
+#fixed-nav {
+        position: fixed;
+        top: 0;
+        min-width: 100%;
+}
+
+.header {
+        background-color: #147fd5;
+        border-bottom: 1px solid #0d63a8;
+        height: 48px;
+}
+
+.header img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 12px;
+        
+}
+
+.header li {
+        display: inline;
+        list-style-type: none;
+        
+}
+
+.header ul {
+        height: 48px; /*-----match height of ".header"-----*/
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        
+}
+
+
+.header-tags {
+        background-color: #147fd5;
+                -moz-background-clip: padding;     /* Firefox 3.6 */
+                -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+                background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+        border-bottom: 3px solid rgba(0, 0, 0, .1);
+        height: 36px;
+        color: #0d63a8;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+            justify-content: space-between;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            align-items: center;
+        padding-left: 36px;
+        padding-right: 36px;
+}
+
+.header-tags .selected-tag {
+        color: #ffffff;
+}
+
+.helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+}
+
+.img-scale {
+        height: auto;
+        max-width: 100%;
+        
+}
+
+main {
+        /*max-width: 960px;*/
+        max-width: 100%;
+        
+}
+
+nav {
+        height: 100%;
+        background-color: #ffffff;
+                -moz-background-clip: padding;     /* Firefox 3.6 */
+                -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+                background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+        border-right: 3px solid rgba(0, 0, 0, .1);
+        width: 237px;
+        position: absolute;
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-240px, 0);
+        transform: translate(-240px, 0);
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+        z-index: 10;
+}
+
+nav li {
+        margin-bottom: 12px;
+}
+
+nav li a {
+        color: inherit;
+}
+
+nav ul {
+        color: #a5b4c3;
+        font-weight: bold;
+        padding-left: 24px;
+}
+
+
+
+nav.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+                
+}
+
+.nav-header {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #eff1f5;
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        text-align: center;
+}
+
+.nav-header object {
+        display: inline-block;
+        max-width: 40%;
+        height: auto;
+}
+
+.nav-social {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #eff1f5;
+        text-align: center;
+        
+}
+
+.nav-social object {
+        display: inline-block;
+        height: auto;
+        width: 30px;
+}
+
+.nav-social object:nth-child(2) {
+        margin-left: 32px;
+}
+
+.posts {
+        padding-top: 88px;
+}
+
+.tag-color-blue {
+        color: #0d63a8;
+}
+.tag-color-gray {
+        color: #a5b4c3;
+}
+
+.tag-color-red {
+        color: #f35b5b;
+}
+
+.tag-color-white {
+        color: #ffffff;
+}
+
+ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+}
+
+.post {
+        background-color: #fff;
+        margin: 12px;
+        padding: 24px;
+        border: 1px solid #eff1f5;
+}
+
+.post-tags { 
+        background-color: #fff;
+        color: #f35b5b;
+        height: 36px;
+        margin-top: 100px;
+}
+
+.post-tags li {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 36px;
+}
+
+.post-tags ul {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 36px;
+        padding-right: 36px;
+}
+
+
+.post-tags-specific {
+        /*display: absolute;
+                left: 0;-----this seems to be the point where shit got fucked*/
+        background-color: #fff;
+        color: #f35b5b;
+        height: 36px;
+        max-width: 100%;
+        white-space: nowrap;
+}
+
+.post-tags-specific li {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 36px;
+        margin-left: 24px;
+        overflow: hidden;
+}
+
+.post-tags-specific ul {
+        padding: 0;
+        /*padding-left: 36px;
+        padding-right: 36px;*/
+        margin: 0;
+        max-width: 100%;
+        overflow: hidden;
+}
+
+.post-tags-specific-wrapper {
+        height: 36px;
+        margin-top: 24px; /*temporary*/
+        overflow: hidden;
+}
+
+#site-title {
+        max-width: 75%;
+}
+
+ul {
+        list-style: none;
+}
+
+
+/*------------------------------------------------------------Media Queries------------------------------------------------------------*/
+
+
+@media (min-width: 1025px) {
+        .container {
+                background-color: #f8f8f9;
+        }
+        #fixed-nav {
+                background: url(../img/header-background-2560x96.jpg) no-repeat fixed;
+                background-size: auto 96px;
+                background-position: top center;
+                background-repeat: no-repeat;
+        }
+        .header {
+                background-color: transparent; /*#147fd5;*/
+                background-image: radial-gradient(ellipse, rgba(54,67,80,.8), rgba(20,127,213,.95));
+                border-bottom: 1px solid #0d63a8;
+                height: 96px;
+        }        
+        .header ul {
+                height: 96px; /*-----match height of ".header"-----*/
+                text-align: center;
+        }
+        .header-tags {
+                padding-left: 216px;
+                padding-right: 216px;
+        }
+        .nav-header object {
+                display: inline-block;
+                height: 105px;
+                width: auto;
+        }
+        .post {
+                margin: 96px;
+        }
+        #site-title {
+                margin-left: auto;
+                margin-right: auto;
+                
+        }
+        
+}
+
+@media (min-width: 700px){
+        body {
+                display: flex;
+                flex-flow: row nowrap;
+        }
+        .container {
+                width: auto;
+                flex-grow: 1;
+                margin-left: 240px;
+        }
+        #fixed-nav {
+               top: 0;
+               min-width: calc(100% - 240px);
+        }
+        /*.header li {
+                display: inline-block;
+        }
+        .header ul {
+                text-align: center;
+        }*/
+        .header img {
+                margin-left: 24px;
+        }
+        .header-tags {
+                justify-content: space-around;
+        }
+        #menu{
+                display: none;
+        }
+        nav {
+                position: relative;
+                transform: translate(0, 0);
+                width: 239px;
+                border-right: 1px solid #eff1f5;
+        }
+        /*.post-tags {
+                max-width: calc(100% - 240px);
+        }
+        .post-tags-specific-wrapper {
+                max-width: calc(100% - 240px);
+        }-----No idea what the fuck is going on with the width now so we're going to turn this off for now. But this is supposed to limit the width of the containers of the ULs. I might have to target the ULs themselves but that didn't seem to solve the problem. The issue could be elsewhere however*/
+}
+
+@media (max-width: 420px) {
+        .post-tags ul {
+                padding-left: 12px;
+                padding-right: 12px;
+        }
+}
+
+/*-------------------------------------------------------FOUNDATION CLASS INFRASTRUCTURE-------------------------------------------------------*/
+
+.row {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 1170px;
+}
+
+.row:before, .row:after {
+        content: " ";
+        display: table;
+}
+
+.row:after {
+        clear: both;
+}
+
+.row.collapse > .column,
+.row.collapse > .columns {
+        padding-left: 0;
+        padding-right: 0;
+}
+
+.row.collapse .row {
+        margin-left: 0;
+        margin-right: 0;
+}
+
+.row .row {
+        width: auto;
+        margin-left: -0.9375rem;
+        margin-right: -0.9375rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: none;
+}
+
+.row .row:before, .row .row:after {
+        content: " ";
+        display: table;
+}
+
+.row .row:after {
+        clear: both;
+}
+
+.row .row.collapse {
+        width: auto;
+        margin: 0;
+        max-width: none;
+}
+
+.row .row.collapse:before, .row .row.collapse:after {
+        content: " ";
+        display: table;
+}
+.row .row.collapse:after {
+        clear: both;
+}
+
+.column,
+.columns {
+  padding-left: 0; /*originally 0.9375rem*/
+  padding-right: 0; /*originally 0.9375rem*/
+  width: 100%;
+  float: left; }
+
+[class*="column"] + [class*="column"]:last-child {
+  float: right; }
+
+[class*="column"] + [class*="column"].end {
+  float: left; }
+
+@media {
+  .large-push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .large-pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .large-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .large-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .large-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .large-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .large-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .large-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .large-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .large-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .large-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .large-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .large-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .large-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .large-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .large-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .large-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .large-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .large-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .large-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .large-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .large-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .large-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .large-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
+
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0; /*originally 0.9375rem*/
+    padding-right: 0; /*originally 0.9375rem*/
+    float: left; }
+
+  .large-1 {
+    width: 8.33333%; }
+
+  .large-2 {
+    width: 16.66667%; }
+
+  .large-3 {
+    width: 25%; }
+
+  .large-4 {
+    width: 33.33333%; }
+
+  .large-5 {
+    width: 41.66667%; }
+
+  .large-6 {
+    width: 50%; }
+
+  .large-7 {
+    width: 58.33333%; }
+
+  .large-8 {
+    width: 66.66667%; }
+
+  .large-9 {
+    width: 75%; }
+
+  .large-10 {
+    width: 83.33333%; }
+
+  .large-11 {
+    width: 91.66667%; }
+
+  .large-12 {
+    width: 100%; }
+
+  .large-offset-0 {
+    margin-left: 0% !important; }
+
+  .large-offset-1 {
+    margin-left: 8.33333% !important; }
+
+  .large-offset-2 {
+    margin-left: 16.66667% !important; }
+
+  .large-offset-3 {
+    margin-left: 25% !important; }
+
+  .large-offset-4 {
+    margin-left: 33.33333% !important; }
+
+  .large-offset-5 {
+    margin-left: 41.66667% !important; }
+
+  .large-offset-6 {
+    margin-left: 50% !important; }
+
+  .large-offset-7 {
+    margin-left: 58.33333% !important; }
+
+  .large-offset-8 {
+    margin-left: 66.66667% !important; }
+
+  .large-offset-9 {
+    margin-left: 75% !important; }
+
+  .large-offset-10 {
+    margin-left: 83.33333% !important; }
+
+  .large-offset-11 {
+    margin-left: 91.66667% !important; }
+
+  .large-reset-order {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left; }
+
+  .column.large-centered,
+  .columns.large-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+
+  .column.large-uncentered,
+  .columns.large-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left; }
+
+  .column.large-centered:last-child,
+  .columns.large-centered:last-child {
+    float: none; }
+
+  .column.large-uncentered:last-child,
+  .columns.large-uncentered:last-child {
+    float: left; }
+
+  .column.large-uncentered.opposite,
+  .columns.large-uncentered.opposite {
+    float: right; }
+
+  .push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; } }
+    
+
+@media (max-width: 1169px) {
+  .medium-push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .medium-pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .medium-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .medium-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .medium-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .medium-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .medium-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .medium-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .medium-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .medium-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .medium-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .medium-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .medium-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .medium-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .medium-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .medium-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .medium-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .medium-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .medium-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .medium-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .medium-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .medium-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .medium-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .medium-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
+
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    float: left; }
+
+  .medium-1 {
+    width: 8.33333%; }
+
+  .medium-2 {
+    width: 16.66667%; }
+
+  .medium-3 {
+    width: 25%; }
+
+  .medium-4 {
+    width: 33.33333%; }
+
+  .medium-5 {
+    width: 41.66667%; }
+
+  .medium-6 {
+    width: 50%; }
+
+  .medium-7 {
+    width: 58.33333%; }
+
+  .medium-8 {
+    width: 66.66667%; }
+
+  .medium-9 {
+    width: 75%; }
+
+  .medium-10 {
+    width: 83.33333%; }
+
+  .medium-11 {
+    width: 91.66667%; }
+
+  .medium-12 {
+    width: 100%; }
+
+  .medium-offset-0 {
+    margin-left: 0% !important; }
+
+  .medium-offset-1 {
+    margin-left: 8.33333% !important; }
+
+  .medium-offset-2 {
+    margin-left: 16.66667% !important; }
+
+  .medium-offset-3 {
+    margin-left: 25% !important; }
+
+  .medium-offset-4 {
+    margin-left: 33.33333% !important; }
+
+  .medium-offset-5 {
+    margin-left: 41.66667% !important; }
+
+  .medium-offset-6 {
+    margin-left: 50% !important; }
+
+  .medium-offset-7 {
+    margin-left: 58.33333% !important; }
+
+  .medium-offset-8 {
+    margin-left: 66.66667% !important; }
+
+  .medium-offset-9 {
+    margin-left: 75% !important; }
+
+  .medium-offset-10 {
+    margin-left: 83.33333% !important; }
+
+  .medium-offset-11 {
+    margin-left: 91.66667% !important; }
+
+  .medium-reset-order {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left; }
+
+  .column.medium-centered,
+  .columns.medium-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+
+  .column.medium-uncentered,
+  .columns.medium-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left; }
+
+  .column.medium-centered:last-child,
+  .columns.medium-centered:last-child {
+    float: none; }
+
+  .column.medium-uncentered:last-child,
+  .columns.medium-uncentered:last-child {
+    float: left; }
+
+  .column.medium-uncentered.opposite,
+  .columns.medium-uncentered.opposite {
+    float: right; }
+
+  .push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; } }
+
+@media (max-width: 779px) {
+  .small-push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .small-pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .small-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .small-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .small-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .small-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .small-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .small-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .small-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .small-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .small-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .small-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .small-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .small-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .small-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .small-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .small-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .small-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .small-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .small-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .small-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .small-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .small-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .small-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
+
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0;
+    padding-right:0;
+    float: left; }
+
+  .small-1 {
+    width: 8.33333%; }
+
+  .small-2 {
+    width: 16.66667%; }
+
+  .small-3 {
+    width: 25%; }
+
+  .small-4 {
+    width: 33.33333%; }
+
+  .small-5 {
+    width: 41.66667%; }
+
+  .small-6 {
+    width: 50%; }
+
+  .small-7 {
+    width: 58.33333%; }
+
+  .small-8 {
+    width: 66.66667%; }
+
+  .small-9 {
+    width: 75%; }
+
+  .small-10 {
+    width: 83.33333%; }
+
+  .small-11 {
+    width: 91.66667%; }
+
+  .small-12 {
+    width: 100%; }
+
+  .small-offset-0 {
+    margin-left: 0% !important; }
+
+  .small-offset-1 {
+    margin-left: 8.33333% !important; }
+
+  .small-offset-2 {
+    margin-left: 16.66667% !important; }
+
+  .small-offset-3 {
+    margin-left: 25% !important; }
+
+  .small-offset-4 {
+    margin-left: 33.33333% !important; }
+
+  .small-offset-5 {
+    margin-left: 41.66667% !important; }
+
+  .small-offset-6 {
+    margin-left: 50% !important; }
+
+  .small-offset-7 {
+    margin-left: 58.33333% !important; }
+
+  .small-offset-8 {
+    margin-left: 66.66667% !important; }
+
+  .small-offset-9 {
+    margin-left: 75% !important; }
+
+  .small-offset-10 {
+    margin-left: 83.33333% !important; }
+
+  .small-offset-11 {
+    margin-left: 91.66667% !important; }
+
+  .small-reset-order {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left; }
+
+  .column.small-centered,
+  .columns.small-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+
+  .column.small-uncentered,
+  .columns.small-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left; }
+
+  .column.small-centered:last-child,
+  .columns.small-centered:last-child {
+    float: none; }
+
+  .column.small-uncentered:last-child,
+  .columns.small-uncentered:last-child {
+    float: left; }
+
+  .column.small-uncentered.opposite,
+  .columns.small-uncentered.opposite {
+    float: right; } }

@@ -1,0 +1,317 @@
+a {
+        text-decoration: none;
+}
+
+body {
+        font-family: 'Raleway', Helvetica, Arial, sans-serif;
+        margin: 0 0 0 0;
+}
+
+html, body {
+        height: 100%;
+        
+}
+
+.container {
+        background-color: #eff1f5;
+        height: 100%;
+}
+
+.content {
+        overflow:hidden;
+        margin: 0 auto;
+        max-width: 100%;
+        
+}
+
+.fake-tumblr-post {
+        background-color: white;
+        max-width: 300px;
+        margin: 0 auto;
+        padding-left: 12px;
+        padding-right: 12px;
+        
+}
+
+#fixed-nav {
+        position: absolute;
+        top: 0;
+        min-width: 100%;
+}
+
+.header {
+        background-color: #147fd5;
+        border-bottom: 1px solid #0d63a8;
+        height: 48px;
+}
+
+.header img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 12px;
+        
+}
+
+.header li {
+        display: inline;
+        list-style-type: none;
+        
+}
+
+.header ul {
+        height: 48px; /*-----match height of ".header"-----*/
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        
+}
+
+
+.header-tags {
+        background-color: #147fd5;
+                -moz-background-clip: padding;     /* Firefox 3.6 */
+                -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+                background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+        border-bottom: 3px solid rgba(0, 0, 0, .1);
+        height: 36px;
+        color: #0d63a8;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+            justify-content: space-between;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            align-items: center;
+        padding-left: 36px;
+        padding-right: 36px;
+        
+}
+
+.header-tags .selected-tag {
+        color: #ffffff;
+}
+
+.helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+}
+
+.img-scale {
+        height: auto;
+        max-width: 100%;
+        
+}
+
+main {
+        /*max-width: 960px;*/
+        max-width: 100%;
+        
+}
+
+nav {
+        height: 100%;
+        background-color: #ffffff;
+                -moz-background-clip: padding;     /* Firefox 3.6 */
+                -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+                background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+        border-right: 3px solid rgba(0, 0, 0, .1);
+        width: 237px;
+        position: absolute;
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-240px, 0);
+        transform: translate(-240px, 0);
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+        z-index: 10;
+}
+
+nav li {
+        margin-bottom: 12px;
+}
+
+nav li a {
+        color: inherit;
+}
+
+nav ul {
+        color: #a5b4c3;
+        font-weight: bold;
+        padding-left: 24px;
+}
+
+
+
+nav.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+                
+}
+
+.nav-header {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #eff1f5;
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        text-align: center;
+}
+
+.nav-header object {
+        display: inline-block;
+        max-width: 40%;
+        height: auto;
+}
+
+.nav-social {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #eff1f5;
+        text-align: center;
+        
+}
+
+.nav-social object {
+        display: inline-block;
+        height: auto;
+        width: 30px;
+}
+
+.nav-social object:nth-child(2) {
+        margin-left: 32px;
+}
+
+.posts {
+        padding-top: 88px;
+}
+
+.tag-color-blue {
+        color: #0d63a8;
+}
+.tag-color-gray {
+        color: #a5b4c3;
+}
+
+.tag-color-red {
+        color: #f35b5b;
+}
+
+.tag-color-white {
+        color: #ffffff;
+}
+
+.post-tags { 
+        background-color: #fff;
+        color: #f35b5b;
+        height: 36px;
+        margin-top: 100px;
+}
+
+.post-tags li {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 36px;
+}
+
+.post-tags ul {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 36px;
+        padding-right: 36px;
+}
+
+
+.post-tags-specific {
+        /*display: absolute;
+                left: 0;-----this seems to be the point where shit got fucked*/
+        background-color: #fff;
+        color: #f35b5b;
+        height: 36px;
+        max-width: 100%;
+        white-space: nowrap;
+}
+
+.post-tags-specific li {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 36px;
+        margin-left: 24px;
+        overflow: hidden;
+}
+
+.post-tags-specific ul {
+        padding: 0;
+        /*padding-left: 36px;
+        padding-right: 36px;*/
+        margin: 0;
+        max-width: 100%;
+        overflow: hidden;
+}
+
+.post-tags-specific-wrapper {
+        height: 36px;
+        margin-top: 24px; /*temporary*/
+        overflow: hidden;
+}
+
+#site-title {
+        max-width: 75%;
+}
+
+ul {
+        list-style: none;
+}
+
+
+/*------------------------------------------------------------Media Queries------------------------------------------------------------*/
+
+@media (min-width: 700px){
+        body {
+                display: flex;
+                flex-flow: row nowrap;
+        }
+        .container {
+                width: auto;
+                flex-grow: 1;
+        }
+        #fixed-nav {
+               position: absolute;
+               top: 0;
+               min-width: calc(100% - 240px);
+        }
+        /*.header li {
+                display: inline-block;
+        }
+        .header ul {
+                text-align: center;
+        }*/
+        .header img {
+                margin-left: 24px;
+        }
+        .header-tags {
+                justify-content: space-around;
+        }
+        #menu{
+                display: none;
+        }
+        nav {
+                position: relative;
+                transform: translate(0, 0);
+                width: 239px;
+                border-right: 1px solid #eff1f5;
+        }
+        /*.post-tags {
+                max-width: calc(100% - 240px);
+        }
+        .post-tags-specific-wrapper {
+                max-width: calc(100% - 240px);
+        }-----No idea what the fuck is going on with the width now so we're going to turn this off for now. But this is supposed to limit the width of the containers of the ULs. I might have to target the ULs themselves but that didn't seem to solve the problem. The issue could be elsewhere however*/
+}
+
+@media (max-width: 420px) {
+        .post-tags ul {
+                padding-left: 12px;
+                padding-right: 12px;
+        }
+}

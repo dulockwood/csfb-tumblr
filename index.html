@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+            
+            
+        <!--tumblr links for Favicon and RSS feed-->
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+            
+	<link href="css/csfb-tumblr.css" rel="stylesheet">
+            
+        <!--Google Fonts link for Raleway 400 and 700-->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+            
+        <script src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
+        <script src="js/csfb-tumblr.js" charset="utf-8"></script>
+            
+        <title>{Title}</title>
+</head>
+
+<body>
+        <nav id="drawer">
+            <div class="nav-header">
+                <object type="image/svg+xml" data="img/csfb-icon-logo.svg"><img src="img/csfb-icon-logo-231x212.png"></object>
+            </div><!--end "nav-header"-->
+            <div class="nav-social">
+                <object type="image/svg+xml" data="img/icon-facebook-gray.svg"><img src="img/icon-facebook-120x120.png"></object>
+                <object type="image/svg+xml" data="img/icon-twitter-gray.svg"><img src="img/icon-twitter-120x120.png"></object>
+            </div>
+            <ul>
+                <li><a href="http://feelthebern.org/" target="_blank">BERNIE'S STANCES</a></li>
+                <li><a href="http://voteforbernie.org/" target="_blank">VOTE FOR BERNIE</a></li>
+                <li><a href="#">ASK US ANYTHING</a></li>
+                <li><a href="#" target="_blank">ABOUT US</a></li>
+                <li><a href="#" target="_blank">CONTACT US</a></li>
+                <li><a href="https://www.youtube.com/watch?v=RU3NKvvxcSs" target="_blank">BEST VIDEO EVER</a></li>
+            </ul>
+            
+        </nav>
+        
+        <div class="container">
+            <main>
+                <div class="content">
+                    <div id="fixed-nav">
+                    <div class="header">
+                        <ul>
+                        <li><a id="menu"><span class="helper"></span><img src="img/icon-nav-30x24.png"></a></li>
+                        <li><span class="helper"></span><img id="site-title" src="img/csfb-title-324x18.png"></li>
+                        </ul>
+                    </div><!--end ".header"-->
+                    <div class="header-tags">
+                        <div class="selected-tag">ALL POSTS</div>
+                        <div>THE ISSUES</div>
+                        <div>UPDATES</div>
+                    </div><!--end ".header-tags"-->
+                    </div><!--end "#fixed-nav"-->
+                    <!--<div class="post-tags">
+                        <ul>
+                            <li><a class="tag-color-gray" href="#">SOCIAL{Tag}</a></li>
+                            <li><a class="tag-color-gray" href="#">ECONOMY{Tag}</a></li>
+                            <li><a class="tag-color-gray" href="#">FOREIGN{Tag}</a></li>
+                            <li><a class="tag-color-gray" href="#">DOMESTIC{Tag}</a></li>
+                        </ul>
+                    </div><!--end ".post-tags"-->
+                    <div class="post-tags-specific-wrapper">
+                        <div class=""></div>
+                    <div class="post-tags-specific">
+                        <ul>
+                            <!--<li>NAFTA</li>
+                            <li>TAX POLICY</li>
+                            <li>INFRASTRUCTURE</li>-->
+                            <!--<li>TPP</li>
+                            <li>DODD-FRANK</li>
+                            <li>INCOME INEQUALITY</li>--adding these extra LIs seemed to fuck things up too. Doesn't make sense yet-->
+                        </ul>
+                    </div><!--end ".post-tags-specific"-->
+                    </div><!--end ".post-tags-specific-wrapper"-->
+                <div class="posts"><!--------------------------------START HERE------------------------------------------------------>
+                        <ol id="posts">
+                            <!--{block:Posts}{block:Text}-->
+                                <li class="post text">
+                                    <!--{block:Title}-->
+                                        <h3><a href="{Permalink}">{Title}</a></h3>
+                                    <!--{/block:Title}{Body}-->
+                                </li>
+                            <!--{/block:Text}{block:Photo}-->
+                                <li class="post photo">
+                                    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                                    <!--{block:Caption}-->
+                                        <div class="caption">{Caption}</div>
+                                    <!--{/block:Caption}-->
+                                </li>
+                            <!--{/block:Photo}{block:Panorama}-->
+                                <li class="post panorama">
+                                    <!--{LinkOpenTag}-->
+                                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                                    <!--{LinkCloseTag}{block:Caption}-->
+                                    <div class="caption">{Caption}</div>
+                                    <!--{/block:Caption}-->
+                                </li>
+                            <!--{/block:Panorama}{block:Photoset}-->
+                                <li class="post photoset">
+                                    <!--{Photoset-500}{block:Caption}-->
+                                        <div class="caption">{Caption}</div>
+                                    <!--{/block:Caption}-->
+                                </li>
+                            <!--{/block:Photoset}{block:Quote}-->
+                                <li class="post quote">
+                                    "{Quote}"
+                                    <!--{block:Source}-->
+                                    <div class="source">{Source}</div>
+                                        <!--{/block:Source}-->
+                                </li>
+                            <!--{/block:Quote}{block:Link}-->
+                                <li class="post link">
+                                    <a href="{URL}" class="link" {Target}>{Name}</a>
+                                    <!--{block:Description}-->
+                                        <div class="description">{Description}</div>
+                                    <!--{/block:Description}-->
+                                </li>
+                            <!--{/block:Link}{block:Chat}-->
+                                <li class="post chat">
+                                    <!--{block:Title}-->
+                                    <h3><a href="{Permalink}">{Title}</a></h3>
+                                    <!--{/block:Title}-->
+                                    <ul class="chat">
+                                        <!--{block:Lines}-->
+                                            <li class="{Alt} user_{UserNumber}">
+                                            <!--{block:Label}-->
+                                                <span class="label">{Label}</span>
+                                            <!--{/block:Label}-->
+                                                {Line}
+                                            </li>
+                                        <!--{/block:Lines}-->
+                                    </ul>
+                                </li>
+                            <!--{/block:Chat}{block:Video}-->
+                                <li class="post video">
+                                    {Video-500}
+                                    <!--{block:Caption}-->
+                                        <div class="caption">{Caption}</div>
+                                    <!--{/block:Caption}-->
+                                </li>
+                            <!--{/block:Video}{block:Audio}-->
+                                <li class="post audio">
+                                    {AudioEmbed}
+                                    <!--{block:Caption}-->
+                                        <div class="caption">{Caption}</div>
+                                    <!--{/block:Caption}-->
+                                </li>
+                            <!--{/block:Audio}-->
+                            <!--{block:HasTags}-->
+                                <ul class="tags">
+                                <!--{block:Tags}-->
+                                    <li>
+                                        <a href="{TagURL}">{Tag}</a>
+                                    </li>
+                                <!--{/block:Tags}-->
+                            </ul>
+                            <!--{/block:HasTags}-->
+                            <!--{/block:Posts}-->
+                        </ol><!--end "#posts"-->
+                </div><!--end ".posts"-->
+                </div><!--end ".content"-->
+            </main>
+        </div><!--end ".container"-->
+        
+        
+</body>
+</html>
